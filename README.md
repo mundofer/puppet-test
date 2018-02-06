@@ -1,1 +1,1 @@
-My god, it's full of stars
+Oh, My god, it's full of stars
