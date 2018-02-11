@@ -1,6 +1,6 @@
 # Set up regular Puppet runs
 file { '/usr/local/bin/run-puppet.sh':
-  ensure -> present,
+  ensure => present,
   source => 'puppet:///modules/${module_name}/run-puppet.sh',
   mode   => '0755',
 }
