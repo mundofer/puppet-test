@@ -1,4 +1,4 @@
-class run-puppet {
+class runpuppet {
 	# Set up regular Puppet runs
 	file { '/usr/local/bin/run-puppet.sh':
 	  ensure => present,
