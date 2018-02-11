@@ -1,7 +1,8 @@
 # Set up regular Puppet runs
 file { '/usr/local/bin/run-puppet.sh':
   ensure => present,
-  source => "puppet:///modules/run-puppet.sh",
+  content => "#!/bin/bash\ncd /etc/puppetlabs/code/environments/production && git pull\n/opt/puppetlabs/bin/puppet apply manifests/\n"
+  #source => "puppet:///modules/run-puppet.sh",
   mode   => '0755',
 }
 
