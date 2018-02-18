@@ -1,4 +1,8 @@
 # Set up regular Puppet runs
+package { 'puppet-lint':
+  ensure => installed,
+  provider => puppet-gem,
+}
 file { '/usr/local/bin/run-puppet.sh':
   ensure => present,
   content => "#!/bin/bash\ncd /home/vagrant/puppet && git pull\n/opt/puppetlabs/bin/puppet apply manifests/\n",
