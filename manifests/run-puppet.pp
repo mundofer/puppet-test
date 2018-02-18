@@ -6,6 +6,11 @@ file { '/usr/local/bin/run-puppet.sh':
   mode   => '0755',
 }
 
+file { '/tmp/mnt':
+  ensure => directory,
+
+}
+
 cron { 'run-puppet':
   command => '/usr/local/bin/run-puppet.sh',
   hour    => '*',
