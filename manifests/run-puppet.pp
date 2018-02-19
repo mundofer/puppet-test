@@ -1,7 +1,7 @@
 # Set up regular Puppet runs
 package { 'puppet-lint':
   ensure => installed,
-  provider => puppet-gem,
+  provider => puppet_gem,
 }
 
 file { '/usr/local/bin/run-puppet.sh':
