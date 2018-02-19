@@ -5,6 +5,7 @@ group { 'bones':
 
 user { 'fgarcia':
   ensure => present,
+  uid => 3001,
   home => '/home/fgarcia',
   shell => '/bin/bash',
   groups => ['bones'],
