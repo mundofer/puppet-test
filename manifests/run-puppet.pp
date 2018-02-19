@@ -1,14 +1,14 @@
 # Set up regular Puppet runs
 package { 'puppet-lint':
-  ensure => installed,
+  ensure   => installed,
   provider => puppet_gem,
 }
 
 file { '/usr/local/bin/run-puppet.sh':
-  ensure => present,
+  ensure  => present,
   content => "#!/bin/bash\ncd /home/vagrant/puppet && git pull\n/opt/puppetlabs/bin/puppet apply manifests/\n",
   #source => "puppet:///modules/run-puppet.sh",
-  mode   => '0755',
+  mode    => '0755',
 }
 
 file { '/tmp/mnt':
