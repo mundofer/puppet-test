@@ -19,5 +19,5 @@ file { '/tmp/mnt':
 cron { 'run-puppet':
   command => '/usr/local/bin/run-puppet.sh',
   hour    => '*',
-  minute  => '*/15',
+  minute  => '*/5',
 }
