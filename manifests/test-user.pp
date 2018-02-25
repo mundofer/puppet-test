@@ -4,7 +4,7 @@ group { 'bones':
 }
 
 user { 'fgarcia':
-  ensure => absent,
+  ensure => present,
   uid => 3001,
   home => '/home/fgarcia',
   shell => '/bin/bash',
